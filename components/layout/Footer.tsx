@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
 import { Input } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
@@ -137,15 +138,15 @@ export function Footer() {
         >
           <p>© 2025 Sharkspace. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="/privacy" className="transition-colors hover:text-white">
+            <Link href="/privacy" className="transition-colors hover:text-white">
               Privacy Policy
-            </a>
-            <a href="/terms" className="transition-colors hover:text-white">
+            </Link>
+            <Link href="/terms" className="transition-colors hover:text-white">
               Terms
-            </a>
-            <a href="/careers" className="transition-colors hover:text-white">
+            </Link>
+            <Link href="/careers" className="transition-colors hover:text-white">
               Careers
-            </a>
+            </Link>
           </div>
         </m.div>
       </Container>

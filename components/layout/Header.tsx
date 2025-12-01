@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { m, AnimatePresence } from 'framer-motion';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
@@ -39,14 +40,14 @@ export function Header() {
       <Container size="wide">
         <nav className="flex h-16 items-center justify-between md:h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-sharkspace-blue">
               <span className="font-heading text-lg font-bold text-white">S</span>
             </div>
             <span className="font-heading text-xl font-bold text-slate-navy">
               Sharkspace
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden items-center gap-8 md:flex">
