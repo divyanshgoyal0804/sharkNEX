@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Smooth scrolling for the entire page */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* CSS custom properties for fonts */
+  :root {
+    --font-heading: 'SF Pro Display', system-ui, sans-serif;
+    --font-body: var(--font-inter), 'Manrope', system-ui, sans-serif;
+  }
+
+  /* Default body styles */
+  body {
+    @apply bg-cream text-slate-navy;
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Focus states for accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-sharkspace-blue;
+  }
+
+  /* Headings default styles */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-semibold tracking-tight;
+    text-wrap: balance;
+  }
+
+  /* Selection styling */
+  ::selection {
+    @apply bg-sharkspace-blue/20 text-slate-navy;
+  }
+
+  /* Smooth anchor scrolling offset for fixed header */
+  html {
+    scroll-padding-top: 80px;
+  }
+}
+
+@layer components {
+  /* Section spacing utility */
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  /* Card hover effect */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-card hover:-translate-y-1;
+  }
+
+  /* Link hover underline effect */
+  .link-underline {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full;
+  }
+}
+
+@layer utilities {
+  /* Text balance for better heading wrapping */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Soft shadow matching design system */
+  .shadow-soft {
+    box-shadow: 0 4px 20px rgba(26, 36, 48, 0.08);
+  }
+
+  /* Card shadow - more prominent */
+  .shadow-card {
+    box-shadow: 0 8px 30px rgba(26, 36, 48, 0.12);
+  }
+
+  /* Consistent card border radius */
+  .rounded-card {
+    border-radius: 14px;
+  }
+
+  /* Large card border radius */
+  .rounded-card-lg {
+    border-radius: 18px;
+  }
+
+  /* Gradient text utility */
+  .gradient-text {
+    @apply bg-gradient-to-r from-sharkspace-blue to-forest-green bg-clip-text text-transparent;
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Animation delay utilities */
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  /* Safe area padding for mobile devices */
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}

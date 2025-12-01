@@ -1,0 +1,60 @@
+import dynamic from 'next/dynamic';
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
+import { MobileCTA } from '@/components/layout/MobileCTA';
+import { HeroSection } from '@/components/sections/HeroSection';
+
+// Lazy load below-the-fold sections
+const ValuePropsSection = dynamic(() => import('@/components/sections/ValuePropsSection').then(mod => ({ default: mod.ValuePropsSection })), {
+  loading: () => <div className="h-96 animate-pulse bg-cream/50" />,
+});
+const LocationSection = dynamic(() => import('@/components/sections/LocationSection').then(mod => ({ default: mod.LocationSection })), {
+  loading: () => <div className="h-96 animate-pulse bg-white" />,
+});
+const GallerySection = dynamic(() => import('@/components/sections/GallerySection').then(mod => ({ default: mod.GallerySection })), {
+  loading: () => <div className="h-96 animate-pulse bg-white" />,
+});
+const PricingSection = dynamic(() => import('@/components/sections/PricingSection').then(mod => ({ default: mod.PricingSection })), {
+  loading: () => <div className="h-96 animate-pulse bg-cream/50" />,
+});
+const FloorPlanSection = dynamic(() => import('@/components/sections/FloorPlanSection').then(mod => ({ default: mod.FloorPlanSection })), {
+  loading: () => <div className="h-96 animate-pulse bg-white" />,
+});
+const AmenitiesSection = dynamic(() => import('@/components/sections/AmenitiesSection').then(mod => ({ default: mod.AmenitiesSection })), {
+  loading: () => <div className="h-96 animate-pulse bg-cream/50" />,
+});
+const TestimonialsSection = dynamic(() => import('@/components/sections/TestimonialsSection').then(mod => ({ default: mod.TestimonialsSection })), {
+  loading: () => <div className="h-96 animate-pulse bg-white" />,
+});
+const LeadFormSection = dynamic(() => import('@/components/sections/LeadFormSection').then(mod => ({ default: mod.LeadFormSection })), {
+  loading: () => <div className="h-96 animate-pulse bg-sharkspace-blue/10" />,
+});
+const FAQSection = dynamic(() => import('@/components/sections/FAQSection').then(mod => ({ default: mod.FAQSection })), {
+  loading: () => <div className="h-96 animate-pulse bg-white" />,
+});
+const CTASection = dynamic(() => import('@/components/sections/CTASection').then(mod => ({ default: mod.CTASection })), {
+  loading: () => <div className="h-64 animate-pulse bg-slate-navy/10" />,
+});
+
+export default function Home() {
+  return (
+    <>
+      <Header />
+      <main>
+        <HeroSection />
+        <ValuePropsSection />
+        <LocationSection />
+        <GallerySection />
+        <PricingSection />
+        <FloorPlanSection />
+        <AmenitiesSection />
+        <TestimonialsSection />
+        <LeadFormSection />
+        <FAQSection />
+        <CTASection />
+      </main>
+      <Footer />
+      <MobileCTA />
+    </>
+  );
+}
