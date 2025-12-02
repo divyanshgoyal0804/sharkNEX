@@ -44,9 +44,9 @@ export function HeroForm() {
       variants={fadeInUp}
       initial="hidden"
       animate="visible"
-      className="w-full max-w-sm rounded-2xl border border-slate-navy/10 bg-white p-6 shadow-card"
+      className="w-full max-w-2xl rounded-3xl border border-slate-navy/10 bg-white p-10 shadow-card"
     >
-      <h3 className="mb-6 font-heading text-xl font-semibold text-slate-navy">
+      <h3 className="mb-8 font-heading text-2xl font-semibold text-slate-navy">
         Request a Call Back
       </h3>
 
@@ -108,17 +108,7 @@ export function HeroForm() {
             required
             className="h-12"
           />
-          <Select
-            id="hero-requirement"
-            label="Requirements"
-            options={requirementOptions}
-            placeholder="Requirements"
-            value={formState.requirement}
-            onChange={(e) =>
-              setFormState({ ...formState, requirement: e.target.value })
-            }
-            className="h-12"
-          />
+         
 
           <Button
             type="submit"
@@ -136,10 +126,7 @@ export function HeroForm() {
           </Button>
 
           <div className="flex items-center justify-center gap-1.5 pt-2">
-            <Zap className="h-3.5 w-3.5 text-saffron" />
-            <span className="text-xs text-slate-navy/60">
-              Usually responds in 10 mins
-            </span>
+            <br />         
           </div>
         </form>
       )}

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { m, AnimatePresence } from 'framer-motion';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
@@ -41,11 +42,15 @@ export function Header() {
         <nav className="flex h-16 items-center justify-between md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-sharkspace-blue">
-              <span className="font-heading text-lg font-bold text-white">S</span>
-            </div>
-            <span className="font-heading text-xl font-bold text-slate-navy">
-              Sharkspace
+            <Image
+              src="/logo1.png"
+              alt="Sharkspace Logo"
+              width={150}
+              height={50}
+              priority
+              className="h-auto w-auto"
+            />
+            <span className="font-heading text-2xl font-bold text-slate-navy">
             </span>
           </Link>
 

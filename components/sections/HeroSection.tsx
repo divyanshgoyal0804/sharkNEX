@@ -16,7 +16,7 @@ export function HeroSection() {
       {/* Full Screen Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/hero.jpg"
+          src="/heropf.png"
           alt="Sharkspace Coworking Space"
           fill
           priority
@@ -36,51 +36,42 @@ export function HeroSection() {
             animate="visible"
             className="text-center lg:text-left lg:max-w-xl xl:max-w-2xl lg:pl-4 xl:pl-8"
           >
-            <m.div variants={fadeInUp}>
-              <Badge variant="primary" className="mb-6">
-                🚀 Launching Soon in Sector-135
-              </Badge>
-            </m.div>
+            
 
             <m.h1
               variants={fadeInUp}
-              className="font-heading text-4xl font-bold leading-tight text-slate-navy md:text-5xl lg:text-6xl xl:text-[68px]"
+              className="font-heading text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl xl:text-[68px]"
             >
-              Flexible Coworking &{' '}
-              <span className="text-sharkspace-blue">Managed Offices</span> on
+              <span className="text-sharkspace-blue">Flexible Coworking</span> &{' '}
+              Managed Offices on
               Noida Expressway
             </m.h1>
-
             <m.p
               variants={fadeInUp}
-              className="mt-6 text-lg text-slate-navy/70 md:text-xl lg:max-w-xl"
+              className="mt-6 text-xl text-white md:text-2xl lg:max-w-xl"
             >
               Premium hot desks, dedicated desks & private cabins with meeting
               rooms, 24×7 access, enterprise Wi-Fi & community perks — now
               launching in Sector-135.
             </m.p>
 
+            
+
             {/* CTAs */}
             <m.div
               variants={fadeInUp}
               className="mt-8 flex flex-col items-center gap-4 sm:flex-row lg:justify-start"
             >
-              <Button href="#lead-form" size="lg">
-                Book a Free Tour
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button href="#pricing" variant="outline" size="lg">
-                Get Pricing
-              </Button>
+              
             </m.div>
 
             {/* Phone CTA */}
             <m.a
               variants={fadeInUp}
               href={`tel:${CONTACT.phone}`}
-              className="mt-6 inline-flex items-center gap-2 text-slate-navy/70 transition-colors hover:text-sharkspace-blue"
+              className="mt-6 inline-flex items-center gap-2 text-white text-xl transition-colors hover:text-sharkspace-blue"
             >
-              <Phone className="h-5 w-5" />
+              <Phone className="h-6 w-6" />
               <span className="font-medium">{CONTACT.phoneDisplay}</span>
             </m.a>
 
@@ -110,30 +101,13 @@ export function HeroSection() {
             variants={slideInRight}
             initial="hidden"
             animate="visible"
-            className="relative hidden lg:block lg:justify-self-end lg:pr-4 xl:pr-8"
+            className="relative hidden lg:block lg:justify-self-end lg:mr-8 xl:mr-16"
           >
             <div className="sticky top-24">
               <HeroForm />
 
               {/* Floating Stats Cards */}
-              <m.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.5 }}
-                className="absolute -left-16 bottom-0 rounded-2xl border border-slate-navy/10 bg-white p-4 shadow-card"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-forest-green/10">
-                    <Star className="h-5 w-5 text-forest-green" />
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold text-slate-navy">
-                      <AnimatedCounter value={4.9} suffix="/5" />
-                    </p>
-                    <p className="text-xs text-slate-navy/50">Average Rating</p>
-                  </div>
-                </div>
-              </m.div>
+              
             </div>
           </m.div>
         </div>
