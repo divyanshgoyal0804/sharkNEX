@@ -1,12 +1,13 @@
 'use client';
 
 import Image from 'next/image';
-import { m } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
+import { useState, useCallback, useEffect } from 'react';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, X } from 'lucide-react';
 
 const galleryItems = [
   { id: 'img-cabin', label: 'Private Cabin', image: '/pvtcabin.jpg' },
@@ -19,19 +20,97 @@ const galleryItems = [
   { id: 'img-confroom', label: 'Conference Room', image: '/conference room1st.png' },
 ];
 
+// Lightbox Modal Component
+function Lightbox({
+  image,
+  label,
+  onClose,
+}: {
+  image: string;
+  label: string;
+  onClose: () => void;
+}) {
+  // Close on escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', handleEscape);
+    document.body.style.overflow = 'hidden';
+    
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [onClose]);
+
+  return (
+    <m.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      onClick={onClose}
+    >
+      {/* Glass blur background */}
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-xl" />
+      
+      {/* Close button */}
+      <button
+        onClick={onClose}
+        className="absolute right-4 top-4 z-10 rounded-full bg-white/10 p-3 text-white backdrop-blur-sm transition-colors hover:bg-white/20"
+        aria-label="Close lightbox"
+      >
+        <X className="h-6 w-6" />
+      </button>
+
+      {/* Image container */}
+      <m.div
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.9, opacity: 0 }}
+        transition={{ duration: 0.3, ease: 'easeOut' }}
+        className="relative z-10 flex h-[80vh] w-[90vw] max-w-5xl items-center justify-center overflow-hidden rounded-2xl bg-black/20 shadow-2xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="relative h-full w-full">
+          <Image
+            src={image}
+            alt={label}
+            fill
+            className="object-contain"
+            sizes="90vw"
+            priority
+          />
+        </div>
+        {/* Label */}
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+          <p className="text-center font-heading text-lg font-semibold text-white">
+            {label}
+          </p>
+        </div>
+      </m.div>
+    </m.div>
+  );
+}
+
 function GalleryImage({
   id,
   label,
   image,
+  onClick,
 }: {
   id: string;
   label: string;
   image: string;
+  onClick: () => void;
 }) {
   return (
     <m.div
       variants={fadeInUp}
-      className="group relative overflow-hidden rounded-2xl border border-slate-navy/10 bg-white shadow-soft transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg"
+      className="group relative cursor-pointer overflow-hidden rounded-2xl border border-slate-navy/10 bg-white shadow-soft transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg"
+      onClick={onClick}
     >
       {/* Image Container - Fixed aspect ratio for uniform size */}
       <div
@@ -65,6 +144,16 @@ function GalleryImage({
 }
 
 export function GallerySection() {
+  const [selectedImage, setSelectedImage] = useState<{ image: string; label: string } | null>(null);
+
+  const openLightbox = useCallback((image: string, label: string) => {
+    setSelectedImage({ image, label });
+  }, []);
+
+  const closeLightbox = useCallback(() => {
+    setSelectedImage(null);
+  }, []);
+
   return (
     <section id="gallery" className="bg-white py-16 md:py-24">
       <Container>
@@ -87,6 +176,7 @@ export function GallerySection() {
               id={item.id}
               label={item.label}
               image={item.image}
+              onClick={() => openLightbox(item.image, item.label)}
             />
           ))}
         </m.div>
@@ -103,7 +193,8 @@ export function GallerySection() {
             <m.div
               key={item.id}
               variants={fadeInUp}
-              className="group relative overflow-hidden rounded-2xl border border-slate-navy/10 shadow-soft transition-transform duration-300 active:scale-[0.98]"
+              className="group relative cursor-pointer overflow-hidden rounded-2xl border border-slate-navy/10 shadow-soft transition-transform duration-300 active:scale-[0.98]"
+              onClick={() => openLightbox(item.image, item.label)}
             >
               <div
                 id={`mobile-${item.id}`}
@@ -151,6 +242,17 @@ export function GallerySection() {
           </Button>
         </m.div>
       </Container>
+
+      {/* Lightbox Modal */}
+      <AnimatePresence>
+        {selectedImage && (
+          <Lightbox
+            image={selectedImage.image}
+            label={selectedImage.label}
+            onClose={closeLightbox}
+          />
+        )}
+      </AnimatePresence>
     </section>
   );
 }
