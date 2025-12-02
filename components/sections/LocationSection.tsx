@@ -24,7 +24,7 @@ export function LocationSection() {
         />
 
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
-          {/* Map Placeholder */}
+          {/* Google Map */}
           <m.div
             variants={slideInLeft}
             initial="hidden"
@@ -32,17 +32,16 @@ export function LocationSection() {
             viewport={{ once: true }}
             className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-slate-navy/10 bg-white shadow-soft"
           >
-            <div className="absolute inset-0 flex items-center justify-center bg-slate-navy/5">
-              <div className="text-center">
-                <MapPin className="mx-auto mb-3 h-12 w-12 text-sharkspace-blue" />
-                <p className="font-heading text-lg font-semibold text-slate-navy">
-                  Sector-135, Noida
-                </p>
-                <p className="mt-1 text-sm text-slate-navy/60">
-                  Interactive map coming soon
-                </p>
-              </div>
-            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.0333565677342!2d77.37683682549627!3d28.508644125732683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce8826931d419%3A0x3f229bc2b2adfdd8!2sLOGIX%20TECHNOVA%2C%20Block%20B%2C%20Sector%20132%2C%20Noida%2C%20Uttar%20Pradesh%20201304!5e0!3m2!1sen!2sin!4v1764679491627!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="absolute inset-0"
+            />
           </m.div>
 
           {/* Location Details */}

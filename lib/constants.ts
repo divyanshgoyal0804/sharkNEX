@@ -11,25 +11,24 @@ export const CONTACT = {
 
 export const PRICING_DATA = [
   {
-    type: 'Hot Desk',
-    price: '₹4,500',
+    type: 'Day Pass',
+    price: '₹500',
     period: '/ month',
-    includes: 'High-speed Wi-Fi, access to common areas & pantry',
+    includes: 'High-speed Wi-Fi, flexible seating, teas & coffees',
     popular: false,
   },
   {
     type: 'Dedicated Desk',
-    price: '₹6,500',
+    price: '₹7,000',
     period: '/ month',
-    includes: 'Fixed workstation, lockers & premium seating zone',
+    includes: 'High-speed Wi-Fi, lockers & promotion',
     popular: true,
   },
   {
     type: 'Private Cabin',
-    subtitle: '2–4 Seats',
-    price: '₹14,500',
+    price: '₹8,000',
     period: '/ month',
-    includes: 'Enclosed cabin, storage, access to meeting rooms',
+    includes: 'Private dedicated seat, lockable cabins, storages included',
     popular: false,
   },
   {

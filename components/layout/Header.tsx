@@ -35,11 +35,11 @@ export function Header() {
         'fixed left-0 right-0 top-0 z-50 transition-all duration-300',
         isScrolled
           ? 'bg-cream/95 shadow-soft backdrop-blur-md'
-          : 'bg-transparent'
+          : 'bg-cream/80 backdrop-blur-sm md:bg-transparent'
       )}
     >
       <Container size="wide">
-        <nav className="flex h-16 items-center justify-between md:h-20">
+        <nav className="flex h-14 items-center justify-between md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <Image
@@ -48,7 +48,7 @@ export function Header() {
               width={150}
               height={50}
               priority
-              className="h-auto w-auto"
+              className="h-8 w-auto md:h-auto md:w-auto"
             />
             <span className="font-heading text-2xl font-bold text-slate-navy">
             </span>
@@ -84,7 +84,7 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="flex h-10 w-10 items-center justify-center rounded-xl text-slate-navy md:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/80 text-slate-navy shadow-sm md:hidden"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (

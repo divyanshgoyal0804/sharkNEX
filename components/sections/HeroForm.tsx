@@ -44,9 +44,9 @@ export function HeroForm() {
       variants={fadeInUp}
       initial="hidden"
       animate="visible"
-      className="w-full max-w-2xl rounded-3xl border border-slate-navy/10 bg-white p-10 shadow-card"
+      className="w-full max-w-2xl rounded-3xl border border-slate-navy/10 bg-white p-6 shadow-card md:p-10"
     >
-      <h3 className="mb-8 font-heading text-2xl font-semibold text-slate-navy">
+      <h3 className="mb-4 font-heading text-xl font-semibold text-slate-navy md:mb-8 md:text-2xl">
         Request a Call Back
       </h3>
 

@@ -17,9 +17,7 @@ const GallerySection = dynamic(() => import('@/components/sections/GallerySectio
 const PricingSection = dynamic(() => import('@/components/sections/PricingSection').then(mod => ({ default: mod.PricingSection })), {
   loading: () => <div className="h-96 animate-pulse bg-cream/50" />,
 });
-const FloorPlanSection = dynamic(() => import('@/components/sections/FloorPlanSection').then(mod => ({ default: mod.FloorPlanSection })), {
-  loading: () => <div className="h-96 animate-pulse bg-white" />,
-});
+
 const AmenitiesSection = dynamic(() => import('@/components/sections/AmenitiesSection').then(mod => ({ default: mod.AmenitiesSection })), {
   loading: () => <div className="h-96 animate-pulse bg-cream/50" />,
 });
@@ -46,7 +44,6 @@ export default function Home() {
         <LocationSection />
         <GallerySection />
         <PricingSection />
-        <FloorPlanSection />
         <AmenitiesSection />
         <TestimonialsSection />
         <LeadFormSection />
