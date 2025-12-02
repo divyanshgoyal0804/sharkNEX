@@ -155,7 +155,7 @@ export function GallerySection() {
   }, []);
 
   return (
-    <section id="gallery" className="bg-white py-16 md:py-24">
+    <section id="gallery" className="bg-white py-10 md:py-16">
       <Container>
         <SectionHeading
           title="See the Space — Designed for Focus & Comfort"

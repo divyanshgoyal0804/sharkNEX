@@ -1,12 +1,13 @@
 'use client';
 
+import Image from 'next/image';
 import { m } from 'framer-motion';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Card } from '@/components/ui/Card';
 import { TESTIMONIALS } from '@/lib/constants';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
-import { Star, Quote } from 'lucide-react';
+import { Star } from 'lucide-react';
 
 export function TestimonialsSection() {
   return (
@@ -27,11 +28,17 @@ export function TestimonialsSection() {
           {TESTIMONIALS.map((testimonial, index) => (
             <m.div key={index} variants={fadeInUp}>
               <Card className="h-full">
-                <Quote className="mb-4 h-8 w-8 text-sharkspace-blue/30" />
-                <p className="text-slate-navy/80 leading-relaxed">
-                  "{testimonial.quote}"
-                </p>
-                <div className="mt-6 flex items-center justify-between border-t border-slate-navy/10 pt-4">
+                {/* Avatar Image */}
+                <div className="mb-4 flex items-center gap-4">
+                  <div className="relative h-14 w-14 overflow-hidden rounded-full border-2 border-sharkspace-blue/20 shadow-md">
+                    <Image
+                      src={testimonial.avatar}
+                      alt={testimonial.name}
+                      fill
+                      className="object-cover"
+                      sizes="56px"
+                    />
+                  </div>
                   <div>
                     <p className="font-heading font-semibold text-slate-navy">
                       {testimonial.name}
@@ -40,6 +47,11 @@ export function TestimonialsSection() {
                       {testimonial.role}
                     </p>
                   </div>
+                </div>
+                <p className="text-slate-navy/80 leading-relaxed">
+                  "{testimonial.quote}"
+                </p>
+                <div className="mt-6 flex items-center border-t border-slate-navy/10 pt-4">
                   <div className="flex gap-0.5">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
                       <Star

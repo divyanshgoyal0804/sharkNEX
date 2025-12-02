@@ -1,10 +1,10 @@
 // Sharkspace Constants and Data
 
 export const CONTACT = {
-  phone: '+91-9876543210',
-  phoneDisplay: '+91-98765 43210',
+  phone: '+91-8800879701',
+  phoneDisplay: '+91-8800879701',
   email: 'hello@sharkspace.in',
-  whatsapp: '919876543210',
+  whatsapp: '918800879701',
   address: 'Sharkspace Coworking, Sector-135, Noida Expressway',
   landmark: '5 min from Sector-142 Metro',
 };
@@ -21,7 +21,7 @@ export const PRICING_DATA = [
     type: 'Dedicated Desk',
     price: '₹7,000',
     period: '/ month',
-    includes: 'High-speed Wi-Fi, lockers & promotion',
+    includes: 'High-speed Wi-Fi, parking & promotion',
     popular: true,
   },
   {
@@ -61,6 +61,7 @@ export const TESTIMONIALS = [
     name: 'Rahul',
     role: 'SaaS Founder',
     rating: 5,
+    avatar: 'https://ui-avatars.com/api/?name=Rahul&background=0066FF&color=fff&size=128',
   },
   {
     quote:
@@ -68,6 +69,7 @@ export const TESTIMONIALS = [
     name: 'Pooja',
     role: 'HR Manager',
     rating: 5,
+    avatar: 'https://ui-avatars.com/api/?name=Pooja&background=FF6B35&color=fff&size=128',
   },
   {
     quote:
@@ -75,33 +77,10 @@ export const TESTIMONIALS = [
     name: 'Michael',
     role: 'Creative Agency',
     rating: 5,
+    avatar: 'https://ui-avatars.com/api/?name=Michael&background=10B981&color=fff&size=128',
   },
 ];
 
-export const FAQS = [
-  {
-    question: 'Do I get access to meeting rooms with a coworking membership?',
-    answer:
-      'Yes, Sharkspace Sector-135 provides meeting room access based on your plan. Private cabins include additional hours.',
-  },
-  {
-    question: 'Can I book a meeting room for just a day?',
-    answer: 'Yes, day bookings for meeting rooms are available.',
-  },
-  {
-    question: 'Do you provide complimentary tea/coffee?',
-    answer: 'Yes — unlimited tea/coffee is available in the pantry.',
-  },
-  {
-    question: 'Are there discounts for long-term commitments?',
-    answer:
-      'Yes — 10% off for 24-month commitments and special pricing for teams above 20 seats.',
-  },
-  {
-    question: 'Is parking available?',
-    answer: 'Yes — secure parking is available for members and visitors.',
-  },
-];
 
 export const VALUE_PROPS = [
   {

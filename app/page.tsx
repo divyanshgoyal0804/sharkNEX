@@ -27,9 +27,7 @@ const TestimonialsSection = dynamic(() => import('@/components/sections/Testimon
 const LeadFormSection = dynamic(() => import('@/components/sections/LeadFormSection').then(mod => ({ default: mod.LeadFormSection })), {
   loading: () => <div className="h-96 animate-pulse bg-sharkspace-blue/10" />,
 });
-const FAQSection = dynamic(() => import('@/components/sections/FAQSection').then(mod => ({ default: mod.FAQSection })), {
-  loading: () => <div className="h-96 animate-pulse bg-white" />,
-});
+
 const CTASection = dynamic(() => import('@/components/sections/CTASection').then(mod => ({ default: mod.CTASection })), {
   loading: () => <div className="h-64 animate-pulse bg-slate-navy/10" />,
 });
@@ -47,7 +45,6 @@ export default function Home() {
         <AmenitiesSection />
         <TestimonialsSection />
         <LeadFormSection />
-        <FAQSection />
         <CTASection />
       </main>
       <Footer />

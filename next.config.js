@@ -11,11 +11,10 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
     // Add external image domains here if needed
     remotePatterns: [
-      // Example:
-      // {
-      //   protocol: 'https',
-      //   hostname: 'images.unsplash.com',
-      // },
+      {
+        protocol: 'https',
+        hostname: 'ui-avatars.com',
+      },
     ],
   },
 

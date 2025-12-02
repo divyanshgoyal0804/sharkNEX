@@ -12,7 +12,7 @@ import { Check, ArrowRight } from 'lucide-react';
 
 export function PricingSection() {
   return (
-    <section id="pricing" className="bg-white py-16 md:py-24">
+    <section id="pricing" className="bg-white py-8 md:py-12">
       <Container>
         <SectionHeading
           title="Plans that Scale with Your Team"
