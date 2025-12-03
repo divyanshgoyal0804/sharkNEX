@@ -13,8 +13,8 @@ import { Phone, Star, ArrowRight } from 'lucide-react';
 export function HeroSection() {
   return (
     <section className="relative min-h-screen overflow-hidden pt-14 md:pt-20">
-      {/* Full Screen Background Image */}
-      <div className="absolute inset-0">
+      {/* Full Screen Background Image - Desktop */}
+      <div className="absolute inset-0 hidden md:block">
         <Image
           src="/heropf.png"
           alt="Sharkspace Coworking Space"
@@ -24,7 +24,21 @@ export function HeroSection() {
           sizes="100vw"
         />
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/40 md:bg-gradient-to-r md:from-cream/5 md:via-transparent md:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-cream/5 via-transparent to-transparent" />
+      </div>
+
+      {/* Full Screen Background Image - Mobile */}
+      <div className="absolute inset-0 md:hidden">
+        <Image
+          src="/herophone.png"
+          alt="Sharkspace Coworking Space"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/40" />
       </div>
 
       {/* Desktop Layout */}
