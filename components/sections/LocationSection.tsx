@@ -20,7 +20,7 @@ export function LocationSection() {
       <Container>
         <SectionHeading
           title="Perfectly Connected — Right on Noida Expressway"
-          subtitle="Located in Sector-135, minutes away from major tech parks, corporates and residential neighborhoods. Skip the commute chaos and work closer to where life happens."
+          subtitle="Located in Sector-132, minutes away from major tech parks, corporates and residential neighborhoods. Skip the commute chaos and work closer to where life happens."
         />
 
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">

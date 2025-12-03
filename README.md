@@ -1,6 +1,6 @@
-# Sharkspace Coworking - Noida Sector 135 Landing Page
+# Sharkspace Coworking - Noida Sector 132 Landing Page
 
-A high-conversion landing page for Sharkspace premium coworking space located on Noida Expressway, Sector 135.
+A high-conversion landing page for Sharkspace premium coworking space located on Noida Expressway, Sector 132.
 
 ## Tech Stack
 

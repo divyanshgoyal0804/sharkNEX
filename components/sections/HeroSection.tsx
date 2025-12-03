@@ -65,7 +65,7 @@ export function HeroSection() {
             >
               Premium hot desks, dedicated desks & private cabins with meeting
               rooms, 24×7 access, enterprise Wi-Fi & community perks — now
-              launching in Sector-135.
+              launching in Sector-132.
             </m.p>
 
             {/* Phone CTA */}
@@ -134,7 +134,7 @@ export function HeroSection() {
               variants={fadeInUp}
               className="mt-3 text-sm text-white/90"
             >
-              Premium hot desks, dedicated desks & private cabins with 24×7 access — now launching in Sector-135.
+              Premium hot desks, dedicated desks & private cabins with 24×7 access — now launching in Sector-132.
             </m.p>
             <m.a
               variants={fadeInUp}

@@ -18,11 +18,11 @@ const manrope = Manrope({
 
 // Site metadata for SEO
 export const metadata: Metadata = {
-  title: 'Sharkspace Coworking - Noida Sector 135 | Premium Workspaces',
+  title: 'Sharkspace Coworking - Noida Sector 132 | Premium Workspaces',
   description:
     'Premium hot desks, dedicated desks & private cabins on Noida Expressway. 24×7 access, meeting rooms, enterprise Wi-Fi. Book a free tour today.',
   keywords:
-    'coworking noida, coworking sector 135, managed office noida expressway, private cabin noida',
+    'coworking noida, coworking sector 132, managed office noida expressway, private cabin noida',
   authors: [{ name: 'Sharkspace' }],
   creator: 'Sharkspace',
   publisher: 'Sharkspace',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: 'Sharkspace Coworking - Noida Sector 135 | Premium Workspaces',
+    title: 'Sharkspace Coworking - Noida Sector 132 | Premium Workspaces',
     description:
       'Premium hot desks, dedicated desks & private cabins on Noida Expressway. 24×7 access, meeting rooms, enterprise Wi-Fi. Book a free tour today.',
     url: 'https://sharkspace.in',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sharkspace Coworking - Noida Sector 135 | Premium Workspaces',
+    title: 'Sharkspace Coworking - Noida Sector 132 | Premium Workspaces',
     description:
       'Premium hot desks, dedicated desks & private cabins on Noida Expressway. 24×7 access, meeting rooms, enterprise Wi-Fi.',
   },

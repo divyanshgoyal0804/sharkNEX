@@ -5,7 +5,7 @@ export const CONTACT = {
   phoneDisplay: '+91-8800879701',
   email: 'hello@sharkspace.in',
   whatsapp: '918800879701',
-  address: 'Sharkspace Coworking, Sector-135, Noida Expressway',
+  address: 'Sharkspace Coworking, Sector-132, Noida Expressway',
   landmark: '5 min from Sector-142 Metro',
 };
 
