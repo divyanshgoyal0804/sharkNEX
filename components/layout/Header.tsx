@@ -14,7 +14,6 @@ const navLinks = [
   { label: 'Plans', href: '#pricing' },
   { label: 'Amenities', href: '#amenities' },
   { label: 'Location', href: '#location' },
-  { label: 'FAQ', href: '#faq' },
 ];
 
 export function Header() {
