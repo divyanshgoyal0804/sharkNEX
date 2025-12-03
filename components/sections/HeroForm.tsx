@@ -3,20 +3,10 @@
 import { useState } from 'react';
 import { m } from 'framer-motion';
 import { Input } from '@/components/ui/Input';
-import { Select } from '@/components/ui/Select';
 import { Button } from '@/components/ui/Button';
 import { CONTACT } from '@/lib/constants';
 import { fadeInUp } from '@/lib/animations';
-import { Phone, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-
-const requirementOptions = [
-  { value: 'hot-desk', label: 'Hot Desk (1 person)' },
-  { value: 'dedicated-desk', label: 'Dedicated Desk (1 person)' },
-  { value: 'cabin-2-4', label: 'Private Cabin (2-4 seats)' },
-  { value: 'cabin-5-10', label: 'Private Cabin (5-10 seats)' },
-  { value: 'team-suite', label: 'Team Suite (10+ seats)' },
-  { value: 'other', label: 'Other / Not Sure' },
-];
+import { Phone, CheckCircle, ArrowRight } from 'lucide-react';
 
 export function HeroForm() {
   const [formState, setFormState] = useState({

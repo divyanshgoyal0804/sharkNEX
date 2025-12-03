@@ -3,12 +3,10 @@
 import { useState } from 'react';
 import { m } from 'framer-motion';
 import { Container } from '@/components/ui/Container';
-import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Card } from '@/components/ui/Card';
 import { Input } from '@/components/ui/Input';
 import { Select } from '@/components/ui/Select';
 import { Button } from '@/components/ui/Button';
-import { Badge } from '@/components/ui/Badge';
 import { CONTACT } from '@/lib/constants';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 import { Phone, Zap, CheckCircle } from 'lucide-react';

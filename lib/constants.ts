@@ -13,7 +13,7 @@ export const PRICING_DATA = [
   {
     type: 'Day Pass',
     price: '₹500',
-    period: '/ month',
+    period: '/ day',
     includes: 'High-speed Wi-Fi, flexible seating, teas & coffees',
     popular: false,
   },

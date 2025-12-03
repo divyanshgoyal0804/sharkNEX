@@ -3,10 +3,8 @@
 import Image from 'next/image';
 import { m } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
-import { Badge } from '@/components/ui/Badge';
-import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
 import { HeroForm } from '@/components/sections/HeroForm';
-import { CONTACT, STATS } from '@/lib/constants';
+import { CONTACT } from '@/lib/constants';
 import { fadeInUp, staggerContainer, slideInRight } from '@/lib/animations';
 import { Phone, Star, ArrowRight } from 'lucide-react';
 

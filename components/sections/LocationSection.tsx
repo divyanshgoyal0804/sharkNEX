@@ -5,7 +5,7 @@ import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
 import { CONTACT } from '@/lib/constants';
-import { fadeInUp, staggerContainer, slideInLeft, slideInRight } from '@/lib/animations';
+import { fadeInUp, staggerContainer, slideInLeft } from '@/lib/animations';
 import { MapPin, Car, Coffee, Shield } from 'lucide-react';
 
 const highlights = [
@@ -95,7 +95,7 @@ export function LocationSection() {
                   Book a Visit
                 </Button>
                 <Button
-                  href={`https://wa.me/${CONTACT.whatsapp}`}
+                  href="https://www.google.com/maps/dir/?api=1&destination=LOGIX+TECHNOVA,+Block+B,+Sector+132,+Noida,+Uttar+Pradesh+201304"
                   variant="outline"
                   size="sm"
                 >
