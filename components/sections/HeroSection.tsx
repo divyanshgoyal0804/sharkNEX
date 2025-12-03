@@ -90,7 +90,7 @@ export function HeroSection() {
               <div className="flex items-center gap-1">
                 <Star className="h-4 w-4 fill-saffron text-saffron" />
                 <span className="text-sm font-semibold text-slate-navy">
-                  Rated 4.6/5
+                  Rated 4.7/5
                 </span>
                 <span className="text-sm text-slate-navy/50">
                   across locations

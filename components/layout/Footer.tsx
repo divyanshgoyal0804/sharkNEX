@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Container } from '@/components/ui/Container';
 import { Input } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
@@ -22,11 +23,14 @@ export function Footer() {
         >
           {/* Brand & Contact */}
           <m.div variants={fadeInUp} className="lg:col-span-1">
-            <div className="mb-6 flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-sharkspace-blue">
-                <span className="font-heading text-lg font-bold text-white">S</span>
-              </div>
-              <span className="font-heading text-xl font-bold">Sharkspace</span>
+            <div className="mb-6">
+              <Image
+                src="/logo.png"
+                alt="Sharkspace"
+                width={240}
+                height={72}
+                className="h-20 w-auto md:h-20"
+              />
             </div>
             <div className="space-y-3 text-white/70">
               <p className="flex items-start gap-3">
