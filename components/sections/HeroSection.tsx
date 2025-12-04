@@ -15,11 +15,11 @@ export function HeroSection() {
       <div className="absolute inset-0 hidden md:block">
         <Image
           src="/heropf.png"
-          alt="Sharkspace Coworking Space"
+          alt="Sharkspace Coworking Space Sector 132 Noida Expressway - Premium Shared Office"
           fill
           priority
           className="object-cover"
-          sizes="100vw"
+          sizes="(min-width: 768px) 100vw, 0vw"
         />
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-cream/5 via-transparent to-transparent" />
@@ -29,11 +29,11 @@ export function HeroSection() {
       <div className="absolute inset-0 md:hidden">
         <Image
           src="/herophone.png"
-          alt="Sharkspace Coworking Space"
+          alt="Sharkspace Coworking Space Sector 132 Noida Expressway - Shared Office Space"
           fill
           priority
           className="object-cover"
-          sizes="100vw"
+          sizes="(max-width: 767px) 100vw, 0vw"
         />
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/40" />

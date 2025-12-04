@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
 import { CONTACT } from '@/lib/constants';
 import { fadeInUp } from '@/lib/animations';
+import { sendHeroForm } from '@/lib/email';
 import { Phone, CheckCircle, ArrowRight } from 'lucide-react';
 
 export function HeroForm() {
@@ -17,16 +18,30 @@ export function HeroForm() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError('');
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const success = await sendHeroForm(
+        formState.name,
+        formState.email,
+        formState.phone
+      );
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+      if (success) {
+        setIsSubmitted(true);
+      } else {
+        setError('Failed to send. Please try again or call us directly.');
+      }
+    } catch {
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -114,6 +129,10 @@ export function HeroForm() {
               </>
             )}
           </Button>
+
+          {error && (
+            <p className="text-center text-sm text-red-500">{error}</p>
+          )}
 
           <div className="flex items-center justify-center gap-1.5 pt-2">
             <br />         

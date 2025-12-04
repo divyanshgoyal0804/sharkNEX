@@ -10,14 +10,14 @@ import { fadeInUp, staggerContainer } from '@/lib/animations';
 import { ArrowRight, X } from 'lucide-react';
 
 const galleryItems = [
-  { id: 'img-cabin', label: 'Private Cabin', image: '/pvtcabin.jpg' },
-  { id: 'img-hotdesk', label: 'Hot Desk Area', image: '/shared1.jpg' },
-  { id: 'img-lounge', label: 'Lounge', image: '/lounge.jpeg' },
-  { id: 'img-meetingroom', label: 'Meeting Room', image: '/confroom1.jpg' },
-  { id: 'img-pantry', label: 'Pantry', image: '/Canteen.jpg' },
-  { id: 'img-reception', label: 'Reception', image: '/reception.jpg' },
-  { id: 'img-workspace', label: 'Open Workspace', image: '/shared2.JPG' },
-  { id: 'img-confroom', label: 'Conference Room', image: '/conference room1st.png' },
+  { id: 'img-cabin', label: 'Private Cabin', image: '/pvtcabin.jpg', alt: 'Private Cabin Office Space Sector 132 Noida Expressway' },
+  { id: 'img-hotdesk', label: 'Hot Desk Area', image: '/shared1.jpg', alt: 'Hot Desk Coworking Area Noida Expressway Sector 132' },
+  { id: 'img-lounge', label: 'Lounge', image: '/lounge.jpeg', alt: 'Coworking Lounge Space Sharkspace Noida' },
+  { id: 'img-meetingroom', label: 'Meeting Room', image: '/confroom1.jpg', alt: 'Meeting Room Coworking Space Sector 132 Noida' },
+  { id: 'img-pantry', label: 'Pantry', image: '/Canteen.jpg', alt: 'Pantry Cafeteria Sharkspace Coworking Noida' },
+  { id: 'img-reception', label: 'Reception', image: '/reception.jpg', alt: 'Reception Desk Sharkspace Coworking Sector 132' },
+  { id: 'img-workspace', label: 'Open Workspace', image: '/shared2.JPG', alt: 'Open Shared Workspace Noida Expressway Coworking' },
+  { id: 'img-confroom', label: 'Conference Room', image: '/conference room1st.png', alt: 'Conference Room Sharkspace Coworking Sector 132 Noida' },
 ];
 
 // Lightbox Modal Component
@@ -99,11 +99,13 @@ function GalleryImage({
   id,
   label,
   image,
+  alt,
   onClick,
 }: {
   id: string;
   label: string;
   image: string;
+  alt: string;
   onClick: () => void;
 }) {
   return (
@@ -117,11 +119,11 @@ function GalleryImage({
         id={id}
         className="relative aspect-[4/3] w-full overflow-hidden"
         role="img"
-        aria-label={label}
+        aria-label={alt}
       >
         <Image
           src={image}
-          alt={label}
+          alt={alt}
           fill
           loading="lazy"
           placeholder="blur"
@@ -176,7 +178,8 @@ export function GallerySection() {
               id={item.id}
               label={item.label}
               image={item.image}
-              onClick={() => openLightbox(item.image, item.label)}
+              alt={item.alt}
+              onClick={() => openLightbox(item.image, item.alt)}
             />
           ))}
         </m.div>
@@ -194,23 +197,23 @@ export function GallerySection() {
               key={item.id}
               variants={fadeInUp}
               className="group relative cursor-pointer overflow-hidden rounded-2xl border border-slate-navy/10 shadow-soft transition-transform duration-300 active:scale-[0.98]"
-              onClick={() => openLightbox(item.image, item.label)}
+              onClick={() => openLightbox(item.image, item.alt)}
             >
               <div
                 id={`mobile-${item.id}`}
                 className="relative aspect-[4/3] w-full overflow-hidden"
                 role="img"
-                aria-label={item.label}
+                aria-label={item.alt}
               >
                 <Image
                   src={item.image}
-                  alt={item.label}
+                  alt={item.alt}
                   fill
                   loading="lazy"
                   placeholder="blur"
                   blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAIhAAAgEDBAMBAAAAAAAAAAAAAQIDAAQRBRIhMQYTQVH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABkRAAIDAQAAAAAAAAAAAAAAAAECABEhQf/aAAwDAQACEQMRAD8AzjxrWL7T9Wlt7WeaO3ZFeRY5CgJI4zgdYq3/AFFf/uf2lKYMlg1k8bkif//Z"
                   className="object-cover"
-                  sizes="100vw"
+                  sizes="(max-width: 767px) 100vw, 0vw"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-slate-navy/60 to-transparent">

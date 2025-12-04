@@ -1,7 +1,7 @@
 {
   "name": "sharkspace-noida-express",
   "version": "0.1.0",
-  "description": "Premium coworking landing page for Sharkspace Sector-135",
+  "description": "Premium coworking landing page for Sharkspace Sector-132",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,31 +11,32 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "clsx": "^2.1.0",
-    "framer-motion": "^11.0.0",
-    "lucide-react": "^0.344.0",
-    "next": "^14.2.0",
-    "react": "^18.3.0",
-    "react-dom": "^18.3.0",
-    "react-intersection-observer": "^9.8.0",
-    "tailwind-merge": "^2.2.0"
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.18.2",
+    "lucide-react": "^0.469.0",
+    "next": "^14.2.33",
+    "nodemailer": "^7.0.11",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-intersection-observer": "^9.16.0",
+    "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
-  "@tailwindcss/forms": "^0.5.7",
-  "@tailwindcss/typography": "^0.5.10",
-  "@types/node": "^20.11.0",
-  "@types/react": "^18.2.0",
-  "@types/react-dom": "^18.2.0",
-  "@typescript-eslint/eslint-plugin": "^7.18.0",
-  "@typescript-eslint/parser": "^7.18.0",
-  "autoprefixer": "^10.4.0",
-  "eslint": "^8.57.0",
-  "eslint-config-next": "^15.5.6",
-  "postcss": "^8.4.0",
-  "prettier": "^3.2.0",
-  "prettier-plugin-tailwindcss": "^0.5.0",
-  "tailwindcss": "^3.4.0",
-  "typescript": "^5.4.0"
-}
-
+    "@tailwindcss/forms": "^0.5.9",
+    "@tailwindcss/typography": "^0.5.15",
+    "@types/node": "^20.17.50",
+    "@types/nodemailer": "^6.4.17",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.7",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.33",
+    "postcss": "^8.5.6",
+    "prettier": "^3.7.4",
+    "prettier-plugin-tailwindcss": "^0.6.12",
+    "tailwindcss": "^3.4.18",
+    "typescript": "^5.8.3"
+  }
 }

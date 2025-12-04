@@ -9,6 +9,7 @@ import { Select } from '@/components/ui/Select';
 import { Button } from '@/components/ui/Button';
 import { CONTACT } from '@/lib/constants';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
+import { sendLeadForm } from '@/lib/email';
 import { Phone, Zap, CheckCircle } from 'lucide-react';
 
 const requirementOptions = [
@@ -30,16 +31,35 @@ export function LeadFormSection() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError('');
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const selectedRequirement = requirementOptions.find(
+        (opt) => opt.value === formState.requirement
+      );
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+      const success = await sendLeadForm(
+        formState.name,
+        formState.email,
+        formState.phone,
+        selectedRequirement?.label || formState.requirement
+      );
+
+      if (success) {
+        setIsSubmitted(true);
+      } else {
+        setError('Failed to send. Please try again or call us directly.');
+      }
+    } catch {
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -154,6 +174,10 @@ export function LeadFormSection() {
                       Quick response — usually under 10 minutes
                     </span>
                   </div>
+
+                  {error && (
+                    <p className="text-center text-sm text-red-500">{error}</p>
+                  )}
                 </form>
               )}
             </Card>
