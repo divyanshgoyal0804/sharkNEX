@@ -42,7 +42,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/logo1.png"
+              src="/logo1.webp"
               alt="Sharkspace Coworking Logo - Shared Office Space Sector 132 Noida Expressway"
               width={150}
               height={50}

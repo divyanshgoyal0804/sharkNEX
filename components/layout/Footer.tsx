@@ -25,7 +25,7 @@ export function Footer() {
           <m.div variants={fadeInUp} className="lg:col-span-1">
             <div className="mb-6">
               <Image
-                src="/logo.png"
+                src="/logo.webp"
                 alt="Sharkspace Coworking - Shared Office Space Sector 132 Noida Expressway"
                 width={240}
                 height={72}

@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image.webp',
         width: 1200,
         height: 630,
         alt: 'Sharkspace Coworking Space Sector 132 Noida Expressway - Premium Shared Office',
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     title: 'Sharkspace Coworking | Shared Office Sector 132 Noida Expressway',
     description:
       'Best coworking space in Sector 132 Noida Expressway. Hot desks, dedicated desks, private cabins. 24×7 access, high-speed WiFi. Book free tour!',
-    images: ['/og-image.jpg'],
+    images: ['/og-image.webp'],
     creator: '@sharkspace',
   },
   robots: {
@@ -205,9 +205,9 @@ export default function RootLayout({
       'https://www.linkedin.com/company/sharkspace/',
     ],
     image: [
-      'https://sharkspace.in/images/gallery-1.jpg',
-      'https://sharkspace.in/images/gallery-2.jpg',
-      'https://sharkspace.in/images/gallery-3.jpg',
+      'https://sharkspace.in/images/gallery-1.webp',
+      'https://sharkspace.in/images/gallery-2.webp',
+      'https://sharkspace.in/images/gallery-3.webp',
     ],
     potentialAction: {
       '@type': 'ReserveAction',

@@ -14,7 +14,7 @@ export function HeroSection() {
       {/* Full Screen Background Image - Desktop */}
       <div className="absolute inset-0 hidden md:block">
         <Image
-          src="/heropf.png"
+          src="/heropf.webp"
           alt="Sharkspace Coworking Space Sector 132 Noida Expressway - Premium Shared Office"
           fill
           priority
@@ -28,7 +28,7 @@ export function HeroSection() {
       {/* Full Screen Background Image - Mobile */}
       <div className="absolute inset-0 md:hidden">
         <Image
-          src="/herophone.png"
+          src="/herophone.webp"
           alt="Sharkspace Coworking Space Sector 132 Noida Expressway - Shared Office Space"
           fill
           priority

@@ -10,14 +10,14 @@ import { fadeInUp, staggerContainer } from '@/lib/animations';
 import { ArrowRight, X } from 'lucide-react';
 
 const galleryItems = [
-  { id: 'img-cabin', label: 'Private Cabin', image: '/pvtcabin.jpg', alt: 'Private Cabin Office Space Sector 132 Noida Expressway' },
-  { id: 'img-hotdesk', label: 'Hot Desk Area', image: '/shared1.jpg', alt: 'Hot Desk Coworking Area Noida Expressway Sector 132' },
-  { id: 'img-lounge', label: 'Lounge', image: '/lounge.jpeg', alt: 'Coworking Lounge Space Sharkspace Noida' },
-  { id: 'img-meetingroom', label: 'Meeting Room', image: '/confroom1.jpg', alt: 'Meeting Room Coworking Space Sector 132 Noida' },
-  { id: 'img-pantry', label: 'Pantry', image: '/Canteen.jpg', alt: 'Pantry Cafeteria Sharkspace Coworking Noida' },
-  { id: 'img-reception', label: 'Reception', image: '/reception.jpg', alt: 'Reception Desk Sharkspace Coworking Sector 132' },
-  { id: 'img-workspace', label: 'Open Workspace', image: '/shared2.JPG', alt: 'Open Shared Workspace Noida Expressway Coworking' },
-  { id: 'img-confroom', label: 'Conference Room', image: '/conference room1st.png', alt: 'Conference Room Sharkspace Coworking Sector 132 Noida' },
+  { id: 'img-cabin', label: 'Private Cabin', image: '/pvtcabin.webp', alt: 'Private Cabin Office Space Sector 132 Noida Expressway' },
+  { id: 'img-hotdesk', label: 'Hot Desk Area', image: '/shared1.webp', alt: 'Hot Desk Coworking Area Noida Expressway Sector 132' },
+  { id: 'img-lounge', label: 'Lounge', image: '/lounge.webp', alt: 'Coworking Lounge Space Sharkspace Noida' },
+  { id: 'img-meetingroom', label: 'Meeting Room', image: '/confroom1.webp', alt: 'Meeting Room Coworking Space Sector 132 Noida' },
+  { id: 'img-pantry', label: 'Pantry', image: '/Canteen.webp', alt: 'Pantry Cafeteria Sharkspace Coworking Noida' },
+  { id: 'img-reception', label: 'Reception', image: '/reception.webp', alt: 'Reception Desk Sharkspace Coworking Sector 132' },
+  { id: 'img-workspace', label: 'Open Workspace', image: '/shared2.webp', alt: 'Open Shared Workspace Noida Expressway Coworking' },
+  { id: 'img-confroom', label: 'Conference Room', image: '/conference room1st.webp', alt: 'Conference Room Sharkspace Coworking Sector 132 Noida' },
 ];
 
 // Lightbox Modal Component
@@ -127,7 +127,7 @@ function GalleryImage({
           fill
           loading="lazy"
           placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAIhAAAgEDBAMBAAAAAAAAAAAAAQIDAAQRBRIhMQYTQVH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABkRAAIDAQAAAAAAAAAAAAAAAAECABEhQf/aAAwDAQACEQMRAD8AzjxrWL7T9Wlt7WeaO3ZFeRY5CgJI4zgdYq3/AFFf/uf2lKYMlg1k8bkif//Z"
+          blurDataURL="data:image/webp;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAIhAAAgEDBAMBAAAAAAAAAAAAAQIDAAQRBRIhMQYTQVH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABkRAAIDAQAAAAAAAAAAAAAAAAECABEhQf/aAAwDAQACEQMRAD8AzjxrWL7T9Wlt7WeaO3ZFeRY5CgJI4zgdYq3/AFFf/uf2lKYMlg1k8bkif//Z"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
         />
@@ -211,7 +211,7 @@ export function GallerySection() {
                   fill
                   loading="lazy"
                   placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAIhAAAgEDBAMBAAAAAAAAAAAAAQIDAAQRBRIhMQYTQVH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABkRAAIDAQAAAAAAAAAAAAAAAAECABEhQf/aAAwDAQACEQMRAD8AzjxrWL7T9Wlt7WeaO3ZFeRY5CgJI4zgdYq3/AFFf/uf2lKYMlg1k8bkif//Z"
+                  blurDataURL="data:image/webp;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAIhAAAgEDBAMBAAAAAAAAAAAAAQIDAAQRBRIhMQYTQVH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABkRAAIDAQAAAAAAAAAAAAAAAAECABEhQf/aAAwDAQACEQMRAD8AzjxrWL7T9Wlt7WeaO3ZFeRY5CgJI4zgdYq3/AFFf/uf2lKYMlg1k8bkif//Z"
                   className="object-cover"
                   sizes="(max-width: 767px) 100vw, 0vw"
                 />

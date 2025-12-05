@@ -16,15 +16,15 @@ export default function manifest(): MetadataRoute.Manifest {
     categories: ['business', 'productivity', 'office'],
     icons: [
       {
-        src: '/logo.png',
+        src: '/logo.webp',
         sizes: '240x72',
-        type: 'image/png',
+        type: 'image/webp',
         purpose: 'any',
       },
       {
-        src: '/logo1.png',
+        src: '/logo1.webp',
         sizes: '150x50',
-        type: 'image/png',
+        type: 'image/webp',
         purpose: 'maskable',
       },
     ],
