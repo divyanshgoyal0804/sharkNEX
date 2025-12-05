@@ -6,9 +6,14 @@ const nextConfig = {
   // Clean URLs without trailing slashes
   trailingSlash: false,
 
-  // Image optimization configuration
+  // Image optimization configuration for LCP performance
   images: {
     formats: ['image/avif', 'image/webp'],
+    // Optimized device sizes for responsive images
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    // Minimum cache time for optimized images (1 year)
+    minimumCacheTTL: 31536000,
     // Add external image domains here if needed
     remotePatterns: [
       {
@@ -21,12 +26,7 @@ const nextConfig = {
   // Vercel deployment optimization
   output: 'standalone',
 
-  // Experimental features for App Router (if needed)
-  experimental: {
-    // Enable optimizations as needed
-  },
-
-  // Headers for SEO and security
+  // Headers for SEO, security, and caching
   async headers() {
     return [
       {
@@ -43,6 +43,26 @@ const nextConfig = {
           {
             key: 'X-XSS-Protection',
             value: '1; mode=block',
+          },
+        ],
+      },
+      // Cache static assets for 1 year
+      {
+        source: '/(.*)\\.(webp|avif|jpg|jpeg|png|gif|ico|svg)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      // Cache fonts
+      {
+        source: '/(.*)\\.(woff|woff2|ttf|eot)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
           },
         ],
       },

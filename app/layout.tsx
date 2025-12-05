@@ -308,6 +308,29 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
       <head>
+        {/* Preconnect to Google Fonts first for better performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Preload LCP images for faster rendering */}
+        <link
+          rel="preload"
+          as="image"
+          href="/heropf.webp"
+          type="image/webp"
+          media="(min-width: 768px)"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/herophone.webp"
+          type="image/webp"
+          media="(max-width: 767px)"
+          fetchPriority="high"
+        />
+        {/* DNS Prefetch for external resources */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
         {/* JSON-LD Structured Data for SEO */}
         <script
           type="application/ld+json"
@@ -325,9 +348,6 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
-        {/* Preconnect to external domains for performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* Google Tag Manager - to be added in analytics phase */}
         {/* <script>...</script> */}
       </head>
