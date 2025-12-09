@@ -308,26 +308,21 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
       <head>
-        {/* Preconnect to Google Fonts first for better performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
+        
+        
         {/* Preload LCP images for faster rendering */}
-        <link
-          rel="preload"
-          as="image"
-          href="/heropf.webp"
-          type="image/webp"
-          media="(min-width: 768px)"
-          fetchPriority="high"
-        />
-        <link
-          rel="preload"
-          as="image"
-          href="/herophone.webp"
-          type="image/webp"
-          media="(max-width: 767px)"
-          fetchPriority="high"
-        />
+        
+      <link
+  rel="preload"
+  as="image"
+  href="/heropf.webp"
+  imageSrcSet="/heropf.webp 768w, /herophone.webp 767w"
+  imageSizes="100vw"
+  fetchPriority="high"
+/>
+
+
         {/* DNS Prefetch for external resources */}
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />

@@ -6,7 +6,7 @@ import { Phone, ArrowRight } from 'lucide-react';
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen overflow-hidden pt-14 md:pt-20">
+    <section className="relative min-h-screen overflow-hidden pt-14 md:pt-20" style={{ minHeight: "100vh" }}>
       {/* Full Screen Background Image - Desktop (LCP Element) */}
       <div className="absolute inset-0 hidden md:block">
         <Image
