@@ -97,8 +97,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code',
-    // Add your Google Search Console verification code
+    google: 'eef9119e00cfbb1e',
   },
   other: {
     'geo.region': 'IN-UP',
@@ -309,7 +308,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
       <head>
 
-        
+
         
         {/* Preload LCP images for faster rendering */}
         
