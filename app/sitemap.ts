@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://sharkspace.in';
+  const baseUrl = 'https://noidaexpressway.sharkspace.in';
   const currentDate = new Date();
 
   return [

@@ -27,9 +27,13 @@ export const metadata: Metadata = {
     'Best coworking space in Sector 132 Noida Expressway. Premium shared office, hot desks, dedicated desks & private cabins. 24×7 access, high-speed WiFi, meeting rooms. Near Sector 142 Metro. Book free tour!',
   keywords: [
     'coworking space noida expressway',
+    'coworking space in sector 132',
+    'coworking space near sector 132',
     'shared office sector 132',
     'coworking noida',
     'coworking sector 132',
+    'coworking in sector 132',
+    'coworking near sector 132',
     'shared office noida expressway',
     'office space sector 132 noida',
     'coworking near sector 142 metro',

@@ -8,11 +8,8 @@ import { HeroSection } from '@/components/sections/HeroSection';
 const ValuePropsSection = dynamic(() => import('@/components/sections/ValuePropsSection').then(mod => ({ default: mod.ValuePropsSection })), {
   loading: () => <div className="h-96 animate-pulse bg-cream/50" />,
 });
-const LocationSection = dynamic(() => import('@/components/sections/LocationSection').then(mod => ({ default: mod.LocationSection })), {
-  loading: () => <div className="h-96 animate-pulse bg-white" />,
-});
-const GallerySection = dynamic(() => import('@/components/sections/GallerySection').then(mod => ({ default: mod.GallerySection })), {
-  loading: () => <div className="h-96 animate-pulse bg-white" />,
+const LocationGallerySection = dynamic(() => import('@/components/sections/LocationGallerySection').then(mod => ({ default: mod.LocationGallerySection })), {
+  loading: () => <div className="h-96 animate-pulse bg-cream/50" />,
 });
 const PricingSection = dynamic(() => import('@/components/sections/PricingSection').then(mod => ({ default: mod.PricingSection })), {
   loading: () => <div className="h-96 animate-pulse bg-cream/50" />,
@@ -39,8 +36,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <ValuePropsSection />
-        <LocationSection />
-        <GallerySection />
+        <LocationGallerySection />
         <PricingSection />
         <AmenitiesSection />
         <TestimonialsSection />
