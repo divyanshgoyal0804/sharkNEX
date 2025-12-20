@@ -68,7 +68,7 @@ export const TESTIMONIALS = [
       'We scaled from 4 seats to 18 within the same centre without shifting offices. Smoothest managed office experience ever.',
     name: 'Pooja',
     role: 'HR Manager',
-    rating: 5,
+    rating: 4,
     avatar: 'https://ui-avatars.com/api/?name=Pooja&background=FF6B35&color=fff&size=128',
   },
   {
