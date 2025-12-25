@@ -53,10 +53,10 @@ export function HeroSection() {
           <div className="text-center w-full">
             <h1 className="font-heading text-3xl font-bold leading-tight text-white">
               <span className="text-sharkspace-blue">Flexible Coworking</span> &{' '}
-              Managed Offices on Noida Expressway
+              Managed Offices in Noida
             </h1>
             <p className="mt-3 text-sm text-white/90">
-              Premium hot desks, dedicated desks & private cabins with 24×7 access — now launching in Sector-132.
+              Premium hot desks, dedicated desks & private cabins with 24×7 access
             </p>
             <a
               href={`tel:${CONTACT.phone}`}

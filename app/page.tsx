@@ -35,8 +35,9 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
-        <ValuePropsSection />
+        
         <LocationGallerySection />
+        <ValuePropsSection />
         <PricingSection />
         <AmenitiesSection />
         <TestimonialsSection />
