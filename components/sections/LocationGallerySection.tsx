@@ -13,11 +13,11 @@ const locations = [
   {
     id: 'expressway',
     name: 'Noida Expressway',
-    fullName: 'Sector 132, Noida Expressway',
-    address: 'Logix Technova, Block B, Sector 132, Noida, UP 201304',
-    landmark: '5 min from Sector 142 Metro',
-    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.0333565677342!2d77.37683682549627!3d28.508644125732683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce8826931d419%3A0x3f229bc2b2adfdd8!2sLOGIX%20TECHNOVA%2C%20Block%20B%2C%20Sector%20132%2C%20Noida%2C%20Uttar%20Pradesh%20201304!5e0!3m2!1sen!2sin!4v1764679491627!5m2!1sen!2sin',
-    directionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=LOGIX+TECHNOVA,+Block+B,+Sector+132,+Noida,+Uttar+Pradesh+201304',
+    fullName: 'Lotus Business Park, Sector 127',
+    address: 'Lotus Business Park, Sector 127, Noida, Uttar Pradesh',
+    landmark: 'Near Noida Expressway',
+    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.1975772851015!2d77.34535822549722!3d28.53378047571884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce7546c2d78a3%3A0x55e21aedcdcabf5b!2sLotus%20Business%20Park!5e0!3m2!1sen!2sin!4v1766769739911!5m2!1sen!2sin',
+    directionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=Lotus+Business+Park,+Sector+127,+Noida',
     gallery: [
       { id: 'exp-1', label: 'Private Cabin', image: '/expressway/1000269110.webp', alt: 'Private Cabin Office Space Sector 132 Noida Expressway' },
       { id: 'exp-2', label: 'Hot Desk Area', image: '/expressway/1000269112.webp', alt: 'Hot Desk Coworking Area Noida Expressway Sector 132' },
@@ -32,11 +32,11 @@ const locations = [
   {
     id: 'sec62',
     name: 'Noida Sector 62',
-    fullName: 'Sector 62, Noida',
-    address: 'Sector 62, Noida, Uttar Pradesh',
+    fullName: 'C-20, Sector 62, Noida',
+    address: 'C-20, 1/1A, Coast Guard Golf Ground Rd, C Block, Phase 2, Industrial Area, Sector 62, Noida, UP 201309',
     landmark: 'Near Sector 62 Metro Station',
-    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14012.452267493095!2d77.36000000000001!3d28.627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5456923f011%3A0x95f54be88e71f6a3!2sSector%2062%2C%20Noida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1703145600000!5m2!1sen!2sin',
-    directionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=Sector+62,+Noida,+Uttar+Pradesh',
+    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.781695191255!2d77.3439277467958!3d28.623904521415827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce55f9851f9d1%3A0xedcab2b42929f949!2salt.f%20coworking%20%7C%20Coworking%20Space%20in%20Sector%2062%20Noida!5e0!3m2!1sen!2sin!4v1766769835056!5m2!1sen!2sin',
+    directionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=C-20,+Sector+62,+Noida,+Uttar+Pradesh',
     gallery: [
       { id: 'sec62-1', label: 'Workspace', image: '/62/Gemini_Generated_Image_3b9s213b9s213b9s.webp', alt: 'Open Shared Workspace Sector 62 Noida' },
       { id: 'sec62-2', label: 'Conference Room', image: '/62/Gemini_Generated_Image_43uanb43uanb43ua.webp', alt: 'Conference Room Sector 62 Noida' },
@@ -70,11 +70,11 @@ const locations = [
   {
     id: 'sec16',
     name: 'Noida Sector 16',
-    fullName: 'Sector 16, Noida',
-    address: 'Sector 16, Noida, Uttar Pradesh',
+    fullName: 'Logix Park, Sector 16',
+    address: 'Logix Park, Sector 16, Noida, Uttar Pradesh 201301',
     landmark: 'Near Noida City Centre Metro',
-    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14016.452267493095!2d77.31500000000001!3d28.580!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce45b7c5dd40b%3A0x8af553e4e0cc8c1!2sSector%2016%2C%20Noida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1703145600000!5m2!1sen!2sin',
-    directionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=Sector+16,+Noida,+Uttar+Pradesh',
+    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.683200971417!2d77.31252537549881!3d28.57927427569397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5d98ee6d3c5%3A0x34c5ea3d0f04f8a7!2sLogix%20Park!5e0!3m2!1sen!2sin!4v1766769794215!5m2!1sen!2sin',
+    directionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=Logix+Park,+Sector+16,+Noida,+Uttar+Pradesh',
     gallery: [
       { id: 'sec16-1', label: 'Private Cabin', image: '/16/Gemini_Generated_Image_67eg4e67eg4e67eg.webp', alt: 'Private Cabin Sector 16 Noida' },
       { id: 'sec16-2', label: 'Hot Desk', image: '/16/Gemini_Generated_Image_8af3868af3868af3.webp', alt: 'Hot Desk Sector 16 Noida' },
