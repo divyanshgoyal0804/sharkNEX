@@ -44,8 +44,8 @@ const locations = [
       { id: 'sec62-4', label: 'Lounge', image: '/62/Gemini_Generated_Image_dnokaldnokaldnok.webp', alt: 'Lounge Area Sector 62 Noida' },
       { id: 'sec62-5', label: 'Hot Desk', image: '/62/Gemini_Generated_Image_j2a5ucj2a5ucj2a5.webp', alt: 'Hot Desk Sector 62 Noida' },
       { id: 'sec62-6', label: 'Pantry', image: '/62/Gemini_Generated_Image_lrg4rglrg4rglrg4.webp', alt: 'Pantry Sector 62 Noida' },
-      { id: 'sec62-7', label: 'Reception', image: '/62/Gemini_Generated_Image_3b9s213b9s213b9s.webp', alt: 'Reception Sector 62 Noida' },
-      { id: 'sec62-8', label: 'Meeting Room', image: '/62/Gemini_Generated_Image_43uanb43uanb43ua.webp', alt: 'Meeting Room Sector 62 Noida' },
+      { id: 'sec62-7', label: 'Reception', image: '/62/Gemini_Generated_Image_8fuze58fuze58fuz.webp', alt: 'Reception Sector 62 Noida' },
+      { id: 'sec62-8', label: 'Meeting Room', image: '/62/Gemini_Generated_Image_8fuze58fuze58fuz (1).webp', alt: 'Meeting Room Sector 62 Noida' },
     ],
   },
   {
