@@ -19,13 +19,13 @@ const locations = [
     mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.1975772851015!2d77.34535822549722!3d28.53378047571884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce7546c2d78a3%3A0x55e21aedcdcabf5b!2sLotus%20Business%20Park!5e0!3m2!1sen!2sin!4v1766769739911!5m2!1sen!2sin',
     directionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=Lotus+Business+Park,+Sector+127,+Noida',
     gallery: [
-      { id: 'exp-1', label: 'Private Cabin', image: '/expressway/1000269110.webp', alt: 'Private Cabin Office Space Sector 132 Noida Expressway' },
-      { id: 'exp-2', label: 'Hot Desk Area', image: '/expressway/1000269112.webp', alt: 'Hot Desk Coworking Area Noida Expressway Sector 132' },
-      { id: 'exp-3', label: 'Lounge', image: '/expressway/1000269114.webp', alt: 'Coworking Lounge Space Sharkspace Noida' },
-      { id: 'exp-4', label: 'Meeting Room', image: '/expressway/1000269131.webp', alt: 'Meeting Room Coworking Space Sector 132 Noida' },
+      { id: 'exp-1', label: 'Shared Space', image: '/expressway/1000269110.webp', alt: 'Private Cabin Office Space Sector 132 Noida Expressway' },
+      { id: 'exp-2', label: 'Private Cabin', image: '/expressway/1000269112.webp', alt: 'Hot Desk Coworking Area Noida Expressway Sector 132' },
+      { id: 'exp-3', label: 'Meeting Room', image: '/expressway/1000269114.webp', alt: 'Coworking Lounge Space Sharkspace Noida' },
+      { id: 'exp-4', label: 'Reception', image: '/expressway/1000269131.webp', alt: 'Meeting Room Coworking Space Sector 132 Noida' },
       { id: 'exp-5', label: 'Pantry', image: '/expressway/1000269132.webp', alt: 'Pantry Cafeteria Sharkspace Coworking Noida' },
-      { id: 'exp-6', label: 'Reception', image: '/expressway/1000269133.webp', alt: 'Reception Desk Sharkspace Coworking Sector 132' },
-      { id: 'exp-7', label: 'Conference', image: '/expressway/1000269134.webp', alt: 'Conference Room Sector 132 Noida' },
+      { id: 'exp-6', label: 'Hot Desk Area', image: '/expressway/1000269133.webp', alt: 'Reception Desk Sharkspace Coworking Sector 132' },
+      { id: 'exp-7', label: '', image: '/expressway/1000269134.webp', alt: 'Conference Room Sector 132 Noida' },
       { id: 'exp-8', label: 'Shared Space', image: '/expressway/1000269135.webp', alt: 'Shared Workspace Sector 132 Noida' },
     ],
   },
@@ -39,23 +39,23 @@ const locations = [
     directionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=C-20,+Sector+62,+Noida,+Uttar+Pradesh',
     gallery: [
       { id: 'sec62-1', label: 'Workspace', image: '/62/Gemini_Generated_Image_3b9s213b9s213b9s.webp', alt: 'Open Shared Workspace Sector 62 Noida' },
-      { id: 'sec62-2', label: 'Conference Room', image: '/62/Gemini_Generated_Image_43uanb43uanb43ua.webp', alt: 'Conference Room Sector 62 Noida' },
-      { id: 'sec62-3', label: 'Cabin', image: '/62/Gemini_Generated_Image_cb4197cb4197cb41.webp', alt: 'Private Cabin Sector 62 Noida' },
-      { id: 'sec62-4', label: 'Lounge', image: '/62/Gemini_Generated_Image_dnokaldnokaldnok.webp', alt: 'Lounge Area Sector 62 Noida' },
-      { id: 'sec62-5', label: 'Hot Desk', image: '/62/Gemini_Generated_Image_j2a5ucj2a5ucj2a5.webp', alt: 'Hot Desk Sector 62 Noida' },
-      { id: 'sec62-6', label: 'Pantry', image: '/62/Gemini_Generated_Image_lrg4rglrg4rglrg4.webp', alt: 'Pantry Sector 62 Noida' },
-      { id: 'sec62-7', label: 'Reception', image: '/62/Gemini_Generated_Image_8fuze58fuze58fuz.webp', alt: 'Reception Sector 62 Noida' },
-      { id: 'sec62-8', label: 'Meeting Room', image: '/62/Gemini_Generated_Image_8fuze58fuze58fuz (1).webp', alt: 'Meeting Room Sector 62 Noida' },
+      { id: 'sec62-2', label: 'Lounge', image: '/62/Gemini_Generated_Image_dnokaldnokaldnok.webp', alt: 'Lounge Area Sector 62 Noida' },
+      { id: 'sec62-3', label: 'Conference Room', image: '/62/Gemini_Generated_Image_43uanb43uanb43ua.webp', alt: 'Conference Room Sector 62 Noida' },
+      { id: 'sec62-4', label: 'Meeting Room', image: '/62/Gemini_Generated_Image_8fuze58fuze58fuz.webp', alt: 'Reception Sector 62 Noida' },
+      { id: 'sec62-5', label: 'OpenSpace', image: '/62/Gemini_Generated_Image_cb4197cb4197cb41.webp', alt: 'Private Cabin Sector 62 Noida' },
+      { id: 'sec62-6', label: 'Reception', image: '/62/Gemini_Generated_Image_lrg4rglrg4rglrg4.webp', alt: 'Pantry Sector 62 Noida' },
+      { id: 'sec62-7', label: 'Pantry', image: '/62/Gemini_Generated_Image_j2a5ucj2a5ucj2a5.webp', alt: 'Hot Desk Sector 62 Noida' },
+      { id: 'sec62-8', label: 'Workspace', image: '/62/Gemini_Generated_Image_8fuze58fuze58fuz (1).webp', alt: 'Meeting Room Sector 62 Noida' },
     ],
   },
   {
     id: 'sec63',
     name: 'Noida Sector 63',
-    fullName: 'Sector 63, Noida',
-    address: 'Sector 63, Noida, Uttar Pradesh',
+    fullName: 'Sharkspace, Sector 63, Noida',
+    address: 'Sharkspace Coworking, Sector 63, Noida, Uttar Pradesh',
     landmark: 'Near Sector 63 Metro Station',
-    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14012.452267493095!2d77.37500000000001!3d28.627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5e775eeec19%3A0x3ab4a9e4f9db6b29!2sSector%2063%2C%20Noida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1703145600000!5m2!1sen!2sin',
-    directionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=Sector+63,+Noida,+Uttar+Pradesh',
+    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.3529333494967!2d77.3751536755003!3d28.619182575672053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x646366065cd7b68d%3A0x1f2b9090da0cea2c!2sSharkspace%20Coworking%20%7C%20Managed%20%26%20Shared%20Office%20Space%20in%20Noida%20Sector%2063!5e0!3m2!1sen!2sin!4v1766832948342!5m2!1sen!2sin',
+    directionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=Sharkspace+Coworking+Sector+63+Noida',
     gallery: [
       { id: 'sec63-1', label: 'Open Workspace', image: '/shared1.webp', alt: 'Open Workspace Sector 63 Noida' },
       { id: 'sec63-2', label: 'Meeting Room', image: '/confroom1.webp', alt: 'Meeting Room Sector 63 Noida' },
@@ -76,14 +76,14 @@ const locations = [
     mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.683200971417!2d77.31252537549881!3d28.57927427569397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5d98ee6d3c5%3A0x34c5ea3d0f04f8a7!2sLogix%20Park!5e0!3m2!1sen!2sin!4v1766769794215!5m2!1sen!2sin',
     directionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=Logix+Park,+Sector+16,+Noida,+Uttar+Pradesh',
     gallery: [
-      { id: 'sec16-1', label: 'Private Cabin', image: '/16/Gemini_Generated_Image_67eg4e67eg4e67eg.webp', alt: 'Private Cabin Sector 16 Noida' },
-      { id: 'sec16-2', label: 'Hot Desk', image: '/16/Gemini_Generated_Image_8af3868af3868af3.webp', alt: 'Hot Desk Sector 16 Noida' },
-      { id: 'sec16-3', label: 'Conference', image: '/16/Gemini_Generated_Image_hzxek2hzxek2hzxe.webp', alt: 'Conference Room Sector 16 Noida' },
-      { id: 'sec16-4', label: 'Lounge', image: '/16/Gemini_Generated_Image_jgpgczjgpgczjgpg.webp', alt: 'Lounge Sector 16 Noida' },
-      { id: 'sec16-5', label: 'Reception', image: '/16/Gemini_Generated_Image_ovyc47ovyc47ovyc.webp', alt: 'Reception Sector 16 Noida' },
-      { id: 'sec16-6', label: 'Meeting Room', image: '/16/Gemini_Generated_Image_pzd1f1pzd1f1pzd1.webp', alt: 'Meeting Room Sector 16 Noida' },
-      { id: 'sec16-7', label: 'Pantry', image: '/16/Gemini_Generated_Image_trr47ltrr47ltrr4.webp', alt: 'Pantry Sector 16 Noida' },
-      { id: 'sec16-8', label: 'Workspace', image: '/16/Gemini_Generated_Image_v73056v73056v730.webp', alt: 'Workspace Sector 16 Noida' },
+      { id: 'sec16-1', label: 'Meeting Rooms', image: '/16/Gemini_Generated_Image_67eg4e67eg4e67eg.webp', alt: 'Private Cabin Sector 16 Noida' },
+      { id: 'sec16-2', label: 'Shared Space', image: '/16/Gemini_Generated_Image_8af3868af3868af3.webp', alt: 'Hot Desk Sector 16 Noida' },
+      { id: 'sec16-3', label: 'Shared Desks', image: '/16/Gemini_Generated_Image_hzxek2hzxek2hzxe.webp', alt: 'Conference Room Sector 16 Noida' },
+      { id: 'sec16-4', label: 'Cabins', image: '/16/Gemini_Generated_Image_jgpgczjgpgczjgpg.webp', alt: 'Lounge Sector 16 Noida' },
+      { id: 'sec16-5', label: 'Open Space', image: '/16/Gemini_Generated_Image_ovyc47ovyc47ovyc.webp', alt: 'Reception Sector 16 Noida' },
+      { id: 'sec16-6', label: '', image: '/16/Gemini_Generated_Image_pzd1f1pzd1f1pzd1.webp', alt: 'Meeting Room Sector 16 Noida' },
+      { id: 'sec16-7', label: 'Private Cabins', image: '/16/Gemini_Generated_Image_trr47ltrr47ltrr4.webp', alt: 'Pantry Sector 16 Noida' },
+      { id: 'sec16-8', label: 'Reception', image: '/16/Gemini_Generated_Image_v73056v73056v730.webp', alt: 'Workspace Sector 16 Noida' },
     ],
   },
 ];
@@ -267,9 +267,9 @@ export function LocationGallerySection() {
                       src={item.image}
                       alt={item.alt}
                       fill
-                      loading="lazy"
+                      loading={index < 4 ? "eager" : "lazy"}
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
-                      sizes="18vw"
+                      sizes="(max-width: 1024px) 50vw, 18vw"
                     />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
@@ -339,7 +339,7 @@ export function LocationGallerySection() {
                     src={item.image}
                     alt={item.alt}
                     fill
-                    loading="lazy"
+                    loading={index < 4 ? "eager" : "lazy"}
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                     sizes="(max-width: 640px) 50vw, 25vw"
                   />
