@@ -26,7 +26,7 @@ export function Footer() {
             <div className="mb-6">
               <Image
                 src="/logo.webp"
-                alt="Sharkspace Coworking - Shared Office Space Sector 132 Noida Expressway"
+                alt="Sharkspace Coworking - Shared Office Spaces in Noida"
                 width={240}
                 height={72}
                 className="h-20 w-auto md:h-20"

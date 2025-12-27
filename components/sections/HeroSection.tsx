@@ -11,7 +11,7 @@ export function HeroSection() {
       <div className="absolute inset-0 hidden md:block">
         <Image
           src="/heropf.webp"
-          alt="Sharkspace Coworking Space Sector 132 Noida Expressway - Premium Shared Office"
+          alt="Sharkspace Coworking Spaces in Noida - Premium Shared Office"
           fill
           priority
           fetchPriority="high"
@@ -29,7 +29,7 @@ export function HeroSection() {
       <div className="absolute inset-0 md:hidden">
         <Image
           src="/herophone.webp"
-          alt="Sharkspace Coworking Space Sector 132 Noida Expressway - Shared Office Space"
+          alt="Sharkspace Coworking Spaces in Noida - Premium Shared Office"
           fill
           priority
           fetchPriority="high"

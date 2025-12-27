@@ -22,16 +22,16 @@ export function HeroContent() {
             className="font-heading text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl xl:text-[68px]"
           >
             <span className="text-sharkspace-blue">Flexible Coworking</span> &{' '}
-            Managed Offices on
-            Noida Expressway
+            Managed Offices Across
+            Noida
           </m.h1>
           <m.p
             variants={fadeInUp}
             className="mt-6 text-xl text-white md:text-2xl lg:max-w-xl"
           >
             Premium hot desks, dedicated desks & private cabins with meeting
-            rooms, 24×7 access, enterprise Wi-Fi & community perks — now
-            launching in Sector-132.
+            rooms, 24×7 access, enterprise Wi-Fi & community perks — 4 locations
+            across Noida.
           </m.p>
 
           {/* Phone CTA */}
