@@ -1,27 +1,74 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
-// Create reusable transporter
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST || 'smtp.gmail.com',
-  port: parseInt(process.env.SMTP_PORT || '587'),
-  secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASSWORD,
-  },
-});
+// Force Node.js runtime (not Edge) - required for Nodemailer
+export const runtime = 'nodejs';
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     const { name, email, phone, requirement, formType } = body;
 
+    // Debug logging - check if env vars exist at runtime
+    console.log('[SMTP Debug] Environment check:', {
+      SMTP_HOST: process.env.SMTP_HOST ? '✓ set' : '✗ missing',
+      SMTP_PORT: process.env.SMTP_PORT ? '✓ set' : '✗ missing',
+      SMTP_USER: process.env.SMTP_USER ? '✓ set' : '✗ missing',
+      SMTP_PASSWORD: process.env.SMTP_PASSWORD ? '✓ set' : '✗ missing',
+    });
+
+    // Validate environment variables
+    const smtpUser = process.env.SMTP_USER;
+    const smtpPassword = process.env.SMTP_PASSWORD;
+    const smtpHost = process.env.SMTP_HOST || 'smtp.zoho.in';
+    const smtpPort = parseInt(process.env.SMTP_PORT || '587', 10);
+
+    if (!smtpUser || !smtpPassword) {
+      console.error('[SMTP Error] Missing SMTP credentials');
+      return NextResponse.json(
+        { error: 'Email service not configured' },
+        { status: 500 }
+      );
+    }
+
     // Validate required fields
     if (!name || !email || !phone) {
       return NextResponse.json(
         { error: 'Name, email, and phone are required' },
         { status: 400 }
+      );
+    }
+
+    // Create transporter inside the handler (not at module level)
+    // This ensures env vars are read at runtime, not build time
+    const transporter = nodemailer.createTransport({
+      host: smtpHost,
+      port: smtpPort,
+      secure: false, // false for port 587 (STARTTLS)
+      auth: {
+        user: smtpUser,
+        pass: smtpPassword,
+      },
+      // TLS config required for Zoho on Vercel
+      tls: {
+        ciphers: 'SSLv3',
+        rejectUnauthorized: false,
+      },
+      // Connection timeout settings
+      connectionTimeout: 10000,
+      greetingTimeout: 10000,
+      socketTimeout: 15000,
+    });
+
+    // Verify SMTP connection before sending
+    try {
+      await transporter.verify();
+      console.log('[SMTP] Connection verified successfully');
+    } catch (verifyError) {
+      console.error('[SMTP Error] Connection verification failed:', verifyError);
+      return NextResponse.json(
+        { error: 'Failed to connect to email server' },
+        { status: 500 }
       );
     }
 
@@ -104,8 +151,8 @@ Sharkspace Coworking, Sector-132, Noida Expressway
     `;
 
     // Send email
-    await transporter.sendMail({
-      from: `"Sharkspace Website" <${process.env.SMTP_USER}>`,
+    const info = await transporter.sendMail({
+      from: `"Sharkspace Website" <${smtpUser}>`,
       to: 'sales@sharkspace.in',
       replyTo: email,
       subject: emailSubject,
@@ -113,14 +160,16 @@ Sharkspace Coworking, Sector-132, Noida Expressway
       html: emailHtml,
     });
 
+    console.log('[SMTP] Email sent successfully:', info.messageId);
+
     return NextResponse.json(
-      { success: true, message: 'Email sent successfully' },
+      { success: true, message: 'Email sent successfully', messageId: info.messageId },
       { status: 200 }
     );
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error('[SMTP Error] Failed to send email:', error);
     return NextResponse.json(
-      { error: 'Failed to send email. Please try again.' },
+      { error: error instanceof Error ? error.message : 'Failed to send email. Please try again.' },
       { status: 500 }
     );
   }
