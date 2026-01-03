@@ -19,14 +19,14 @@ export const PRICING_DATA = [
   },
   {
     type: 'Dedicated Desk',
-    price: '₹7,000',
+    price: '₹5,500',
     period: '/ month',
     includes: 'High-speed Wi-Fi, parking & promotion',
     popular: true,
   },
   {
     type: 'Private Cabin',
-    price: '₹8,000',
+    price: '₹6,500',
     period: '/ month',
     includes: 'Private dedicated seat, lockable cabins, storages included',
     popular: false,
