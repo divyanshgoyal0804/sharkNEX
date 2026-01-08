@@ -3,6 +3,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { MobileCTA } from '@/components/layout/MobileCTA';
 import { HeroSection } from '@/components/sections/HeroSection';
+import { PromoPopup } from '@/components/ui/PromoPopup';
 
 // Lazy load below-the-fold sections
 const ValuePropsSection = dynamic(() => import('@/components/sections/ValuePropsSection').then(mod => ({ default: mod.ValuePropsSection })), {
@@ -46,6 +47,7 @@ export default function Home() {
       </main>
       <Footer />
       <MobileCTA />
+      <PromoPopup />
     </>
   );
 }
