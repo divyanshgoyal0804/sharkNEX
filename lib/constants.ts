@@ -12,22 +12,22 @@ export const CONTACT = {
 export const PRICING_DATA = [
   {
     type: 'Day Pass',
-    price: '₹500',
+    price: '₹350',
     period: '/ day',
     includes: 'High-speed Wi-Fi, flexible seating, teas & coffees',
     popular: false,
   },
   {
     type: 'Dedicated Desk',
-    price: '₹5,500',
-    period: '/ month',
+    price: '₹4,000',
+    period: '/ month onwards',
     includes: 'High-speed Wi-Fi, parking & promotion',
     popular: true,
   },
   {
     type: 'Private Cabin',
-    price: '₹6,500',
-    period: '/ month',
+    price: '₹5,000',
+    period: '/ month onwards',
     includes: 'Private dedicated seat, lockable cabins, storages included',
     popular: false,
   },
