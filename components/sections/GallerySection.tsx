@@ -80,7 +80,7 @@ function Lightbox({
             alt={label}
             fill
             className="object-contain"
-            sizes="90vw"
+            sizes="(max-width: 640px) 95vw, (max-width: 1024px) 90vw, 80vw"
             priority
           />
         </div>
@@ -213,7 +213,7 @@ export function GallerySection() {
                   placeholder="blur"
                   blurDataURL="data:image/webp;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAIhAAAgEDBAMBAAAAAAAAAAAAAQIDAAQRBRIhMQYTQVH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABkRAAIDAQAAAAAAAAAAAAAAAAECABEhQf/aAAwDAQACEQMRAD8AzjxrWL7T9Wlt7WeaO3ZFeRY5CgJI4zgdYq3/AFFf/uf2lKYMlg1k8bkif//Z"
                   className="object-cover"
-                  sizes="(max-width: 767px) 100vw, 0vw"
+                  sizes="(max-width: 480px) 100vw, (max-width: 640px) 100vw, (max-width: 768px) 100vw, 0vw"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-slate-navy/60 to-transparent">

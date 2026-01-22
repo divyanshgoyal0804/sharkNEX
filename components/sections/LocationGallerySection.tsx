@@ -144,7 +144,7 @@ function Lightbox({
             alt={label}
             fill
             className="object-contain"
-            sizes="90vw"
+            sizes="(max-width: 640px) 95vw, (max-width: 1024px) 90vw, 80vw"
             priority
           />
         </div>
@@ -341,7 +341,7 @@ export function LocationGallerySection() {
                     fill
                     loading={index < 4 ? "eager" : "lazy"}
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    sizes="(max-width: 640px) 50vw, 25vw"
+                    sizes="(max-width: 480px) 50vw, (max-width: 640px) 50vw, 25vw"
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
