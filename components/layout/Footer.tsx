@@ -29,6 +29,7 @@ export function Footer() {
                 alt="Sharkspace Coworking - Shared Office Spaces in Noida"
                 width={240}
                 height={72}
+                sizes="(max-width: 768px) 180px, 240px"
                 className="h-20 w-auto md:h-20"
               />
             </div>

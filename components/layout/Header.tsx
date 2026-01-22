@@ -47,6 +47,7 @@ export function Header() {
               width={150}
               height={50}
               priority
+              sizes="(max-width: 768px) 100px, 150px"
               className="h-8 w-auto md:h-auto md:w-auto"
             />
             <span className="font-heading text-2xl font-bold text-slate-navy">

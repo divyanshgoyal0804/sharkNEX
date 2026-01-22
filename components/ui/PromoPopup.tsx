@@ -108,7 +108,7 @@ export function PromoPopup() {
                 alt="Sharkspace Coworking"
                 fill
                 className="object-cover"
-                sizes="640px"
+                sizes="(max-width: 640px) 90vw, 640px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               
