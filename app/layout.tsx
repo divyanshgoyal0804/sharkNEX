@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Manrope } from 'next/font/google';
 import { MotionProvider } from '@/components/providers/MotionProvider';
+import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 
 // Font configurations
@@ -355,6 +356,7 @@ export default function RootLayout({
         <MotionProvider>
           {children}
         </MotionProvider>
+        <Analytics />
       </body>
     </html>
   );
